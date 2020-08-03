@@ -126,3 +126,58 @@ def game_hash
     }
   }
 end
+
+# map
+# find
+# select
+
+def all_players
+  # iterate through the hash to find the players
+  # all_players_nested = []
+  # game_hash.each do |location, team_hash|
+  #   all_players_nested << team_hash[:players]
+  # end
+
+  # all_players_nested.flatten
+
+  all_players_nested = game_hash.map do |location, team_hash|
+    team_hash[:players]
+  end
+
+  all_players_nested.flatten
+end
+
+def find_player_by_name(player_name)
+  # # iterate through all the players
+  # found_player = nil
+  # all_players.each do |player_hash|
+  #   # check a condition that is true when the argument (player_name)
+  #   # is equal to the player we're iterating over
+  #   if player_hash[:name] == player_name
+  #     found_player = player_hash
+  #   end
+  # end
+  # found_player
+
+  all_players.find do |player_hash|
+    player_hash[:name] == player_name
+  end
+end
+
+# num_points_scored knows the number of points scored by each player
+def num_points_scored(player_name)
+  binding.pry
+  found_player = find_player_by_name(player_name)
+
+  # return the points for that player
+  found_player[:points]
+end
+
+def shoe_size(player_name)
+  found_player = find_player_by_name(player_name)
+
+  # return the shoe for that player
+  found_player[:shoe]
+end
+
+# num_points_scored("Jeff Adrien")

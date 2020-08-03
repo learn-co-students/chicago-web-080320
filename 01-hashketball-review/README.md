@@ -1,6 +1,6 @@
 # Hashketball Review
 
-## SWBATs
+## Student Will Be Able To s
 - Follow a TDD (Test Driven Development) approach to working on labs
 - Read and understand Ruby error messages
 - Distinguish between data types in Ruby
@@ -22,7 +22,7 @@ Discuss problem solving strategies:
 Discuss refactoring strategies:
 - [ ] Helper methods
 - [ ] Single Responsibility Principle
-- [ ] DRY
+- [ ] DRY - Don't Repeat Yourself
 
 ## RSpec & TDD
 RSpec is a `gem`: someone else's Ruby code that we can use in our projects.
@@ -52,6 +52,9 @@ What can we use each of these for? What will they return?
 - `map`
 - `select`
 - `find`
+
+## REPL notes
+[https://repl.it/@ihollander/DarkorchidTerrificCron](https://repl.it/@ihollander/DarkorchidTerrificCron)
 
 ## Methods in Ruby
 - Variable scope

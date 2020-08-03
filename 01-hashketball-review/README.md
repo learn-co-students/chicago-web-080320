@@ -1,15 +1,16 @@
 # Hashketball Review
 
 ## SWBATs
-- Define TDD (Test Driven Development)
+- Follow a TDD (Test Driven Development) approach to working on labs
+- Read and understand Ruby error messages
 - Distinguish between data types in Ruby
-- Show how to look up documentation for data types in Ruby
+- Look up documentation for data types in Ruby
 - Demonstrate the use of common Array methods: `each`, `map`, `select`, `find`
 - Define the Single Responsibility Principle
 
 ## Outline
 - [ ] Walk through hashketball code
-- [ ] Discuss rspec, learn and Ruby gems in general
+- [ ] Discuss `rspec`, `learn` and Ruby gems in general
 - [ ] Use `binding.pry` and `p` to debug our code
 - [ ] Work on passing tests using TDD
 
@@ -30,6 +31,7 @@ Testing strategies:
 - `rspec --fail-fast` handle one error at a time
 - Red, Green, Refactor
 - Make it work (shameless green), make it right, make it fast
+- Short feedback loop
 
 Debugging tools:
 - `binding.pry` - pause your code and test variables

@@ -18,13 +18,14 @@ Intro to Object Orientation
 - Demonstrate class methods and instance methods on in-built Ruby classes (String, Array)
     - methods as sending messages
     - different approaches for sending messages (dot notation, `send`)
-    - Monkey patching
+    - Monkey patching (NOT RECOMMENDED! demo purposes only...)
+    - Instances vs Classes (`.new`, `.methods`)
 - Build a `BankAccount` class using the deliverables below
     - instance methods
     - instance variables
     - `attr_` macros
     - `new` and `initialize`
-    
+
 ### Part 2
 - Continue a `BankAccount` class using the deliverables below
     - `self`
@@ -33,8 +34,13 @@ Intro to Object Orientation
 
 ## Discuss
 - What are the benefits of Object Oriented Programming?
+    - do more with less code, code organiziation
+    - more developer centric, it lets us write code that models the world around us
+
 - "In Ruby, everything is an object"
 - What is an object?
+    - data (attribute, properties) + behavior (methods, things we can do with an object)
+
 - What is the difference between a class and an instance?
 
 ## Deliverables
@@ -43,6 +49,11 @@ Here is a naive implementation of a bank account in Ruby using only a hash which
 
 ```rb
 bank_account = { account_number: 12345, balance: 100 }
+bank_account2 = { account_number: 54321, amount: 200 }
+
+def deposit(bank_account, money)
+  bank_account[:balance] += money
+end
 ```
 
 Write an implementation of a bank account that meets the following requirements:

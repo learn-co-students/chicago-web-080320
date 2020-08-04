@@ -58,9 +58,9 @@ end
 
 Write an implementation of a bank account that meets the following requirements:
 
-- keeps track of the account number
-- keeps track of the account balance
-- can print the balance of the account
+- [x] keeps track of the account number
+- [x] keeps track of the account balance
+- [x] can print the balance of the account
 - can deposit money into the account
 - can withdraw money from the account
 - can show me all the bank accounts that have been created

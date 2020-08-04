@@ -4,12 +4,14 @@ Intro to Object Orientation
 ## SWBATs
 - [ ] Describe the benefits of Object Oriented Programming
 - [ ] Explain the difference between a class and an instance
-- [ ] Explain how `self` changes based on context
 - [ ] Define attribute readers and writers using `attr_` macros
+- [ ] Explain how `self` changes based on context
 - [ ] Explain the difference between local variables, class variables, and instance variables
 - [ ] Get more practice with array compositions (`each`, `map`, `select`, `find`)
 
 ## Outline
+
+### Part 1
 - Discuss Object Oriented Programming
 - Discuss classes and instances
     - describe methods as the 'interface' for our class
@@ -18,10 +20,14 @@ Intro to Object Orientation
     - different approaches for sending messages (dot notation, `send`)
     - Monkey patching
 - Build a `BankAccount` class using the deliverables below
-    - `new` and `initialize`
     - instance methods
     - instance variables
     - `attr_` macros
+    - `new` and `initialize`
+    
+### Part 2
+- Continue a `BankAccount` class using the deliverables below
+    - `self`
     - class variables
     - class methods
 

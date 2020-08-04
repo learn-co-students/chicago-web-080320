@@ -73,6 +73,85 @@ Write an implementation of a bank account that meets the following requirements:
 
 ## Lecture Notes
 
+Here's how we can define a BankAccount class:
+
+```rb
+class BankAccount
+
+end
+```
+
+With this defined, we can create new instances of BankAccounts:
+
+```rb
+b1 = BankAccount.new # create a new instance of the BankAccount class
+b2 = BankAccount.new
+```
+
+In order to store some data to the class, we can define getter and setter methods. These _instance methods_ will let us store data on an _instance variable_, which is a special variable that has a different scope than local variables. Instance variables can be accessed from any _instance method_ within our class.
+
+```rb
+class BankAccount
+  # Setter method
+  def balance=(new_balance)
+    # @balance is an instance variable
+    @balance = new_balance
+  end
+
+  # Getter method
+  def balance
+    @balance
+  end
+end
+
+# create a new instance of a BankAccount
+b1 = BankAccount.new
+
+# use the setter method to save the balance
+b1.balance = 100
+
+# use the getter method to access the balance
+b1.balance # returns 100
+```
+
+We can also use macros like `attr_reader`, `attr_writer` and `attr_accessor` to setup these getters and setters in our class. This example will behave exactly like the example above: these macros will define instance methods on our class that we can use to get/set data to instance variables (in this example, they will create methods `def balance` and `def balance=(value)` that will use the instance variable `@balance`).
+
+```rb
+class BankAccount
+  # Setter method
+  attr_writer :balance
+
+  # Getter method
+  attr_reader :balance
+end
+
+# create a new instance of a BankAccount
+b1 = BankAccount.new
+# getter and setters still work!
+b1.balance = 100
+b1.balance # returns 100
+```
+
+Since we usually want to create instances with some _initial data_ we can also define a special instance method called `initialize`. This method will be called any time we run `BankAccount.new`:
+
+```rb
+class BankAccount
+  # Getter + Setter method
+  attr_accessor :balance, :account_number
+
+  # initialize
+  def initialize(balance, account_number)
+    @balance = balance
+    @account_number = account_number
+  end
+end
+
+# now BankAccount.new will use our initialize method:
+b1 = BankAccount.new(1000, "12345")
+b1.balance # returns 100
+b1.account_number # returns "12345"
+```
+
 ### Intro
 
 - Today we'll be talking about **Object-Oriented Programming**.

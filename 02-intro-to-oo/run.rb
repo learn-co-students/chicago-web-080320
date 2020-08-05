@@ -1,6 +1,5 @@
 require 'pry'
 
-
 class BankAccount
 
   attr_accessor(:balance)
@@ -38,7 +37,13 @@ class BankAccount
     # binding.pry
   end
 
+  def deposit(amount)
+    self.balance += amount
+  end
 
+  def withdraw(amount)
+    self.balance -= amount
+  end
 
   def account_number
     "IansBank-#{@account_number}"

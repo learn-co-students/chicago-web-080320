@@ -61,10 +61,10 @@ Write an implementation of a bank account that meets the following requirements:
 - [x] keeps track of the account number
 - [x] keeps track of the account balance
 - [x] can print the balance of the account
-- can deposit money into the account
-- can withdraw money from the account
-- can show me all the bank accounts that have been created
-- *bonus* can find a bank account based on the account number
+- [x] can deposit money into the account
+- [x] can withdraw money from the account
+- [x] can show me all the bank accounts that have been created
+- [x] *bonus* can find a bank account based on the account number
 
 ## Discussion Questions
 - What's the difference between a class and an instance?

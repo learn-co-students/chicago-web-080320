@@ -26,9 +26,19 @@ Quick review of OOP:
 
 What do the following mean in plain English? What do they mean in programming?
 
-- Model
-- Domain
+- Model - template, blueprint - Ruby class
+- Domain - area of expertise - domain name - google.com (search), twitter.com (social media)
 - Domain modeling - Entity Relationship Diagram (ERD)
+    YouTube
+    - Video, Comment
+    a video has many comments
+    a comment belongs to video
+
+    Twitter
+    - User, Tweets
+    a user has many tweets
+    a tweet belongs to a user
+
 - Relationships
     - One to many relationship
     - Many to many relationship
@@ -38,7 +48,9 @@ _Why do we care so much about codifying and being really specific about the term
 
 ### How to think about relationships
 1. For every one (x), how many (y)?
+  For every one User, there are many Tweets
 2. For every one (y), how many (x)?
+  For every one Tweet, there is only one User
 
 - Schema
 - Single Source of Truth
@@ -48,8 +60,8 @@ _Why do we care so much about codifying and being really specific about the term
 
 Create a User class. The class should have these methods:
   - [x] `User#initialize(username, bio)` takes a username and a bio and creates a User instance.
-  - [x] `User#username` returns a string for the user's username. _Should not_ be able to change after the user is created.
-  - [x] `User#bio` returns a string for the user's bio. _Should_ be able to change after the user is created.
+  - [x] `User#username` returns a string for the user's username. _Should not_ be able to change after the user is created. (reader)
+  - [x] `User#bio` returns a string for the user's bio. _Should_ be able to change after the user is created. (accessor)
   - [ ] `User#post_tweet(message)` takes a message an argument, creates a new tweet, and adds it to the user's tweet collection.
   - [ ] `User#tweets` returns an array of Tweet instances.
   - [x] `User.all` returns all the User instances in our app.
@@ -58,9 +70,9 @@ Create a User class. The class should have these methods:
 
 Create a Tweet class. The class should have these methods:
   - [ ] `Tweet#initialize(message, user)` takes a message and a user and creates a Tweet instance.
-  - [ ] `Tweet#timestamp` returns the time the Tweet was created. _Should not_ be able to change after the tweet is created.
   - [ ] `Tweet#message` returns a string. _Should not_ be able to change after the tweet is created.
   - [ ] `Tweet#user` returns an instance of the User class. _Should not_ be able to change after the tweet is created.
+  - [ ] `Tweet#timestamp` returns the time the Tweet was created. _Should not_ be able to change after the tweet is created.
   - [ ] `Tweet.all` returns all the Tweet instances in our app.
   - [ ] `Tweet#username` returns the username of the tweet's user.
 

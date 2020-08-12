@@ -1,22 +1,32 @@
 class Game
   attr_accessor :id, :title, :genre, :price
 
-  @@all = []
-
-  # TODO: if there's time, refactor using mass assignment
-  def initialize(id, title, genre, price)
-    @id = id
-    @title = title
-    @genre = genre
-    @price = price
+  def initialize(args_hash)
+    args_hash.each do |key, value|
+      self.send("#{key}=", value)
+    end
+    # @id = args_hash["id"]
+    # @title = args_hash["title"]
+    # @genre = args_hash["genre"]
+    # @price = args_hash["price"]
 
     # TODO: replace with database!
-    @@all << self
+    # @@all << self
   end
 
-  # TODO: replace with database!
+  def save
+    sql = "INSERT INTO games (title, genre, price) VALUES (?, ?, ?)"
+    DB[:conn].execute(sql, self.title, self.genre, self.price)
+  end
+
   def self.all
-    @@all
+    sql = "SELECT * FROM games"
+    games_array = DB[:conn].execute(sql)
+
+    games_array.map do |game_hash|
+      Game.new(game_hash)
+      # Game.new(game_hash["id"], game_hash["title"], game_hash["genre"], game_hash["price"])
+    end
   end
 
 end

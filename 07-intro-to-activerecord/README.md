@@ -15,6 +15,25 @@ Intro to Active Record
 * Review project setup
 * Show how to use `rake` tasks
 * Choose a domain and set up Active Record on our models (Game >-< Player)?
+
+GroceryStore - Song
+
+GroceryStore
+- name - string
+- size_in_sq_ft - integer 
+- location - string
+- 24hours - boolean
+
+```rb
+class GroceryStore
+  attr_accessor :name, :size_in_sq_ft, :location, :twenty_four_hours
+
+  def initialize()
+    # 
+  end
+end
+```
+
     * Set up our database with *migrations*
     * Write CRUD on a model using Active Record
 * Discuss *convention over configuration*, aka Active Record magic
@@ -25,6 +44,38 @@ Intro to Active Record
 ### Active Record
 
 * What are the steps for setting up Active Record on a model?
+
+0. Setup the environment
+
+1. Create a migration
+```
+rake db:create_migration NAME=create_grocery_stores
+```
+
+2. Write the migration code
+
+```rb
+create_table :grocery_stores do |t|
+  t.string :name
+  t.integer :size_in_sq_ft
+  t.string :location
+  t.boolean :twenty_four_hours
+
+  t.timestamps
+end
+```
+
+3. Run the migration
+
+```
+rake db:migrate
+```
+
+3.5 Make sure your migrations worked!
+  - check the schema.rb file
+  - run `rake db:migrate:status`
+
+4. Create a model and connect it to our database
 
 * How can we do CRUD actions using Active Record?
 
@@ -37,7 +88,7 @@ If we want to check what tasks we have available to us, we can do `rake --tasks`
 ### Migrations
 Migrations are Active Record keeps track of database changes over time. Migrations serve a few important purposes. They:
 
-- Simplify the process of setting up a database by letting us write Ruby instead of SQL
+- Simplify the process of setting up/managing a database by letting us write Ruby instead of SQL
 - Ensure Active Record is always aware of the *structure* of our database: the tables and columns that make up our database
 - Keep track of changes to our database over time (like version control/git for our database)
 - Let us share Ruby code for setting up a database, instead of sharing database files directly

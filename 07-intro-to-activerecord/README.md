@@ -12,7 +12,6 @@ Intro to Active Record
 - [ ] Understand how Active Record follows Convention over Configuration
 
 ### Outline
-* Demonstrate Mass Assignment
 * Review project setup
 * Show how to use `rake` tasks
 * Choose a domain and set up Active Record on our models (Game >-< Player)?

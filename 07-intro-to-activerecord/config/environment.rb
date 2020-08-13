@@ -2,7 +2,7 @@ require 'bundler/setup'
 # requires all our gems in the Gemfile into our project
 Bundler.require
 
-# new setup! use database.yml to configure database connection
+# by convention, database.yml will configure database connection
 # ActiveRecord::Base.establish_connection(
 #   adapter: 'sqlite3',
 #   database: "db/development.sqlite"
@@ -12,11 +12,3 @@ Bundler.require
 ActiveRecord::Base.logger = Logger.new(STDOUT)
 
 require_all 'app'
-
-# something like this:
-# module ActiveRecord
-#   class Base
-#     def self.establish_connection(adapter:, database:)
-#     end
-#   end
-# end

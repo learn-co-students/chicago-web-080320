@@ -10,13 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_13_145118) do
+ActiveRecord::Schema.define(version: 2020_08_14_160912) do
 
   create_table "grocery_stores", force: :cascade do |t|
     t.string "name"
     t.integer "size_in_sq_ft"
     t.string "location"
     t.boolean "twenty_four_hours"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "playlist_items", force: :cascade do |t|
+    t.integer "grocery_store_id"
+    t.integer "song_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "songs", force: :cascade do |t|
+    t.string "title"
+    t.string "artist"
+    t.string "genre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

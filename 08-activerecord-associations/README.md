@@ -7,8 +7,43 @@ Active Record Associations
 * Implement many-to-many relationships using Active Record has_many, :through
 * Describe the methods that the relationship macros add to a model
 * Practice looking up library documentation for Active Record Migrations, Queries and Association Macros
+* Work with seed data to get info into the database
+
+## Notes
+
+Active Record Pros & Cons 
+
+- Pros: powerful! method chaining to make advanced queries, less coding (removes boilerplate), similar to built-in Ruby methods, makes it easier to work with a database (don't need to know SQL)
+
+- Cons: lots of new syntax to get confused about, understanding conventions (singular/plural)
+
 
 ## Outline
+* Finish domain model: GroceryStore -< PlaylistItem >- Song
+playlist_item belongs to grocery_store
+
+class PlaylistItem
+  def init(grocery_store)
+    @grocery_store = grocery_store
+  end
+end
+
+grocery_stores
+- string - name
+- integer - size_in_sq_ft
+- string - location
+- boolean - 24hours
+
+songs
+- string - title
+- string - artist
+- string - genre
+
+playlist_items
+- integer - grocery_store_id
+- integer - song_id
+
+
 * Demonstrate `seeds.rb`
 * Review migrations
   * `db:migrate`, `db:rollback`, `db:migrate:status`
@@ -18,6 +53,7 @@ Active Record Associations
   * Before ActiveRecord, how did we write association methods?
   * How can we use ActiveRecord to write SQL to find associations?
   * What do `has_many` and `belongs_to` do for us?
+* How does this work from a CLI?
 
 ### Active Record Setup Checklist
 

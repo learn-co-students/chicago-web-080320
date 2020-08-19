@@ -85,6 +85,7 @@ Congrats, you hit your MVP! Now for some fun bonus features. If you're wondering
   - Also [this one](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20) to turn text to ASCII
   - Check out this awesome post by Sylwia (another Flatiron lead): https://medium.com/@sylwiavargas/adding-pictures-to-your-ruby-cli-4252b89823a
   - And this blog by one of my former students Alison: https://blog.prototypr.io/5-ways-to-make-your-cli-app-more-fun-c737207f3b90
+  - Also you can ask Ian to show you the code from a project he's working on to display images/animations in the terminal
 
 - Add an interactive menu/progress bar/table?
   - Check out [all of the tty gems](https://ttytoolkit.org/components/); in particular `tty-prompt`, `tty-table`, `tty-font` and `tty-spinner`

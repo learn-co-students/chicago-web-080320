@@ -7,6 +7,16 @@
 * HTTP Verbs, Status Codes, Response Body
 * Developer console
 * APIs
+
+- Application Programming Interface
+
+
+class Book
+  def initialize(args_hash)
+    
+  end
+end
+
 * JSON
 
 ### Deliverables

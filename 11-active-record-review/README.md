@@ -124,20 +124,61 @@ Magazine.first.readers
 
 - `Reader#subscribe(magazine, price)`
   - takes a `magazine` (an instance of the `Magazine` class) and a `price` (integer) as arguments, and creates a new `subscription` in the database associated with the magazine and the reader
+
+```rb
+# Code for testing:
+# need to get some data: we need an instance of a magazine, and a price (number)
+magazine = Magazine.first
+
+# instance method for Reader, so we need a reader instance to test
+Reader.first.subscribe(magazine, 50)
+```
+
 - `Reader#total_subcription_price`
   - returns the total price for all the reader's subscriptions
+
+```rb
+# Code for testing:
+# instance method for Reader, so we need a reader instance to test
+Reader.first.total_subcription_price
+```
+
 - `Reader#cancel_subscription(magazine)`
   - takes a `magazine` instance and removes the subscription for this reader
   - you will have to delete a row from the `subscriptions` table to get this to work!
+
+```rb
+# Code for testing:
+# instance method for Reader, so we need a reader instance to test
+reader = Reader.first
+# we need a magazine that is associated with a reader instance
+magazine = reader.magazines.first
+
+# run the method
+reader.cancel_subscription(magazine)
+# see if the subscription was deleted - check if reader.magazines has the magazine we tried to delete
+reader.magazines 
+```
 
 #### Magazine
 
 - `Magazine#email_list`
   - returns a `String` of a semi-colon separated list of emails for all the readers subscribed to this magazine
   - the string should be formatted like this: `email1@example.com;email2@example.com;email3@example.com`
+
+```rb
+# code for testing:
+magazine = Magazine.last
+magazine.email_list
+```
+
 - `Magazine.most_popular`
   - returns the `Magazine` instance with the most subscribers
 
+```rb
+# code for testing
+Magazine.most_popular
+```
 
 ## Rubric
 

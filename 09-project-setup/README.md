@@ -94,3 +94,4 @@ Congrats, you hit your MVP! Now for some fun bonus features. If you're wondering
   - play: `process_id = spawn "afplay test.mp3"`
   - stop playing: `Process.kill("SIGKILL", process_id)`
   - [More advanced audio playing example](https://gist.github.com/ihollander/61b194622b7a5389a581ed2a270d0641)
+  - Also here's a gem Ian made to make this easier: https://github.com/ihollander/ruby_afplay

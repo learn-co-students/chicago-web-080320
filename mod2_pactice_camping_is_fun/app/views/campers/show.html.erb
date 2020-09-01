@@ -1,0 +1,19 @@
+<h1>Camper Show Page!</h1>
+
+<% if flash[:success] %>
+  <p style="color: green"><%= flash[:success] %></p>
+<% end %>
+
+
+<h3><%= @camper.name %></h3>
+<h5>Age: <%= @camper.age %></h5>
+<h5>Activities:
+  <ul>
+    <% @camper.activities.each do |activity| %>
+      <li><%= link_to activity.name, activity_path(activity) %></li>
+    <% end %>
+  </ul>
+</h5>
+
+
+<p><%= link_to "Back to all campers", campers_path %></p>

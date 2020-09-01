@@ -1,0 +1,10 @@
+<h1>All The Campers</h1>
+
+<ul>
+  <% @campers.each do |camper| %>
+    <li><%= link_to camper.name, camper_path(camper) %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Sign up a camper for an activity!", new_signup_path %></p>
+<button><%= link_to "Create a new camper!", new_camper_path, {style: "text-decoration: none" } %></button>

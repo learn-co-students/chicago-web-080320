@@ -19,23 +19,35 @@ Good vs Bad -
 How do we add CSS to our HTML page?
 
 - Inline
+  <h1 style="color:blue;">A Blue Heading</h1>
 - Internal
--
+  <style>
+    body {
+      background-color: black;
+    }
+
+    h1 {
+      color: white;
+      margin: 20px;
+    }
+  </style>
+- External
+  <link rel="stylesheet" href="styles.css">
 
 Types of CSS selectors
 
--
--
--
+- HTML Element
+- Class
+- ID
 
 ## The Box Model
 
 4 Elements of the box model:
 
--
--
--
--
+- Content
+- Padding
+- Border
+- Margin
 
 ## Layouts & Positioning - Floats & Clear
 

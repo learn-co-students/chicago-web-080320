@@ -1,0 +1,13 @@
+<h1>Episode Show</h1>
+
+
+<% if flash[:success] %>
+    <p><%= flash[:success] %></p>
+<% end %>
+
+
+<p>Date: <%=  @episode.date %></p>
+
+<% @episode.guests.each do |guest| %>
+    <p><%= link_to guest.name, guest_path(guest) %></p>
+<% end %>

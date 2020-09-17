@@ -21,10 +21,6 @@ function startCounter() {
 }
 
 function likeNumber() {
-  !likesContainer.children.length ? createAndAppendLi() : determineIfCreateOrAmendLi()
-}
-
-function determineIfCreateOrAmendLi() {
   const existingLi = doesLiExist()
   existingLi ? amendLi(existingLi) : createAndAppendLi()
 }

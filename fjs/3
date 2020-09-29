@@ -1,0 +1,238 @@
+//
+//
+//
+// Pure functions
+
+
+// In order to be considered a pure function:
+//
+//  for a given input a pure f(x) will always produce the same output
+
+
+
+
+const double = num => num * 2
+
+
+console.log(double(45))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const addToCart = (cart, item, quantity)  => {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Higher Order Function
+
+// HOF is any function that either takes a function as an argument OR
+// returns a function as its output
+
+
+
+
+
+// function forEach(arr, callback){
+  // for(let i = 0; i < arr.length; i++){
+    // callback(arr[i])
+  // }
+// }
+
+
+
+// function map(arr, callback){
+  // const output = []
+
+  // for(let i = 0; i < arr.length; i++){
+    // output.push(callback(arr[i]))
+  // }
+
+  // return output
+// }
+
+
+// function filter(arr, callback){
+  // const output = []
+
+  // for(let i = 0; i < arr.length; i++){
+    // if(callback(arr[i])) {
+      // output.push(arr[i])
+    // }
+  // }
+
+  // return output
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function greetingMaker(greeting) {
+  // return function(name) {
+    // console.log(greeting, name)
+  // }
+// }
+
+
+
+// const sayHi = greetingMaker('hi')
+// const sayNamaste = greetingMaker('namaste')
+
+
+// sayHi('alex')
+// sayHi('raza')
+// sayHi('steven')
+
+
+// sayNamaste('zoe')
+// sayNamaste('yann')
+// sayNamaste('sam')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Closure
+
+// HOF that returns a functions. a closure is a function that accesses a variable from the outer function
+
+
+function createOdometer(){
+  let odometer = 100000
+
+
+  return function(){
+    odometer += 10
+    console.log('your current mileage is: ', odometer)
+  }
+}
+
+
+
+
+
+const updateOdometer = createOdometer()
+
+updateOdometer()
+
+
+
+
+
+
+
+
+
+
+
+

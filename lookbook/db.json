@@ -1,0 +1,36 @@
+{
+  "contacts": [
+    {
+      "name": "Raza Jafri",
+      "email": "raza.jafri.sy@gmail.com",
+      "number": "a234234",
+      "linkedIn": "asdfasdf",
+      "id": 9
+    },
+    {
+      "name": "Raza Jafri",
+      "email": "raza.jafri.sy@gmai",
+      "number": "",
+      "linkedIn": "",
+      "id": 10
+    },
+    {
+      "name": "asfadsf",
+      "email": "asdf",
+      "number": "sadf",
+      "linkedIn": "asdf",
+      "error": "",
+      "id": 11
+    },
+    {
+      "name": "Raza Jafri",
+      "email": "raza.jafri.sy@gmail.com",
+      "number": "",
+      "linkedIn": "",
+      "validations": {
+        "email": null
+      },
+      "id": 12
+    }
+  ]
+}
